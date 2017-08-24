@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/homepage', 'LeavingController@home');
+Route::post('/display', 'LeavingController@displayCont');
