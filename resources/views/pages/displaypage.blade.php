@@ -1,8 +1,10 @@
 @extends('layout.index');
 
 @section('content');
+{{--  @if()  --}}
 @foreach($data as $d)
     <div class="container">
+	<b><u><center>COLLEGE LEAVING CERTIFICATE</center></u></b><BR>
 		<div class = "row">
 			<div class = "col-sm-offset-9">
 				Date :
@@ -44,7 +46,7 @@
 				4.
 			</div>
 			<div class = "col-sm-11">
-				Date of birth {{$d->date_of_birth}}    and in (words)  
+				Date of birth <u>{{$d->date_of_birth}}</u> and in (words)  
 			</div>
 		</div>
 		<br>
@@ -122,7 +124,7 @@
 		<br>
 		<div class="row">
 			<div class="col-sm-12">
-				Date : 
+				Date :___________________
 			</div>						
 		</div>
 		<br>
