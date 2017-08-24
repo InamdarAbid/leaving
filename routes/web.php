@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::get('/homepage', 'LeavingController@home');
 Route::post('/display', 'LeavingController@displayCont');
+
+Route::resource('posts','LeavingController');
