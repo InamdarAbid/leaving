@@ -19,3 +19,6 @@ Route::get('/homepage', 'LeavingController@home');
 Route::post('/display', 'LeavingController@displayCont');
 
 Route::resource('posts','LeavingController');
+
+Route::post('/pdfview','LeavingController@thepdfview');
+

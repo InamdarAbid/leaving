@@ -5,6 +5,9 @@
 @foreach($data as $d)
     <div class="container">
 	<b><u><center>COLLEGE LEAVING CERTIFICATE</center></u></b><BR>
+	<form action = "pdfview" method = "POST">
+		<input type="hidden" value="{{$d->uid}}"  name="uid">
+		<input type="hidden" name="_token" value="{{ csrf_token() }}">		
 		<div class = "row">
 			<div class = "col-sm-offset-9">
 				Date :
@@ -129,13 +132,16 @@
 		</div>
 		<br>
 		<div class="row">
-			<div class="col-sm-1">
-				<button class="btn btn-success">Print</button>	
-			</div>
-			<div class=" col-sm-offset-10 col-sm-1">
-				<button class="btn btn-danger">Edit</button>
-			</div>			
+			<div class="col-sm-10">
+				<button class="col-sm-1 btn btn-success" type="submit">Print</button>	
+			</div>					
 		</div>
+	</form>
+	<div class="row">
+		<div class="col-sm-10">
+			<button class="col-sm-1 btn btn-danger" type="submit">Edit</button>
+		</div>
+	</div>
 	</div>
 @endforeach
 @endsection
