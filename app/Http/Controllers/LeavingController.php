@@ -19,10 +19,9 @@ class LeavingController extends Controller
     }
 
     public function thepdfview(Request $request){
-        $temp =  $request->input('uid');
+        return $temp =  $request->input();
         $data = DB::select("SELECT * FROM student where uid = $temp");
-        $pdf = PDF::loadView('pages.homepage');
-        return $pdf->download('pdfview.pdf');
-        
+        $pdf = PDF::loadView('pages.displayfinal')->with('data',$data);
+        return $pdf->download('leaving.pdf');
     }
 }
