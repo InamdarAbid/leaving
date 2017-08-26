@@ -9,12 +9,10 @@
 		<input type="hidden" value="{{$d->uid}}"  name="uid">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">		
 		<div class = "row">
-			<div class = "col-sm-offset-8">
+			<div class = "col-sm-offset-7 col-sm-1" >
 				Date :
 			</div>
-			<div class = "col-sm-3" >
-				<p id = "DATE"></p>
-			</div>		
+			<div class = "col-sm-1" id="DATE"></div>		
 		</div>
 		<br>
 		<div class="row">
@@ -194,7 +192,7 @@
 			mm='0'+mm;
 		} 
 		var today = dd+'/'+mm+'/'+yyyy;
-		document.getElementById("DATE").value = today;
+		document.getElementById("DATE").innerHTML = today;
 	</script>
 @endforeach
 @endsection
