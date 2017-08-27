@@ -10,9 +10,7 @@
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">		
 		<div class = "row">
 			<div class = "col-sm-offset-9">
-				Date :
-			</div>
-			<div class = "col-sm-2" >
+				Date :		
 				<p id = "Date"></p>
 			</div>		
 		</div>
