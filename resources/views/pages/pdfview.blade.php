@@ -1,6 +1,7 @@
-@extends('layout.index');
+@extends('layout.index')
 
-@section('content');
+@section('content')
+
 {{--  @if()  --}}
 @foreach($data as $d)
     <div class="container">
@@ -9,111 +10,76 @@
 		<input type="hidden" value="{{$d->uid}}"  name="uid">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">		
 		<div class = "row">
-			<div class = "col-sm-offset-9">
-				Date :		
-				<p id = "Date"></p>
-			</div>		
+			<div class = "col-sm-offset-7 col-sm-1" align="right">
+				Date : {{$date}}				
+			</div>
+				
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				1.
-			</div>
-			<div class = "col-sm-11">
-				Name of the student (in full) <u>{{$d->full_name}}</u>
+				1. Name of the student (in full) <u>{{$d->full_name}}</u>
 			</div>			
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				2.
-			</div>
-			<div class = "col-sm-11">
-				Caste  
+				2. Caste  
 			</div>			
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				3.
-			</div>
-			<div class = "col-sm-11">
-				Place of birth  
+				3. Place of birth  
 			</div>			
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				4.
-			</div>
-			<div class = "col-sm-11">
-				Date of birth <u>{{$d->date_of_birth}}</u> and in (words)  
+				4. Date of birth <u>{{$d->date_of_birth}}</u> and in (words)  
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				5.
-			</div>
-			<div class = "col-sm-11">
-				Institute last attended   
+				5. Institute last attended   
 			</div>			
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				6.
-			</div>
-			<div class = "col-sm-11">
-				Date of addmission   {{$d->admission_year}}
+				6. Date of addmission   {{$d->admission_year}}
 			</div>			
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				7.
+				7. Progress    8. Conduct					 
 			</div>
-			<div class = "col-sm-5">
-				Progress   
-			</div>
-			<div>
-				8. Conduct
+					
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-1">
+				9. Date of living institute 
 			</div>			
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				9.
-			</div>
-			<div class = "col-sm-5">
-				Date of living institute 
+				10. BE ({{$d->branch}})
 			</div>			
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				10.
-			</div>
-			<div class = "col-sm-11">
-				BE ({{$d->branch}})
+				11. Reason for leaving institute
 			</div>			
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				11.
-			</div>
-			<div class = "col-sm-11">
-				Reason for leaving institute
-			</div>			
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-sm-1">
-				12.
-			</div>
-			<div class = "col-sm-11">
-				Remarks
+				12. Remarks
 			</div>			
 		</div>
 		<br>
@@ -128,33 +94,10 @@
 				Date :___________________
 			</div>						
 		</div>
-		<br>
-		<div class="row">
-			<div class="col-sm-10">
-				<button class="col-sm-1 btn btn-success" type="submit">Print</button>	
-			</div>					
-		</div>
+		<br>		
 	</form>
-	<div class="row">
-		<div class="col-sm-10">
-			<button class="col-sm-1 btn btn-danger" type="submit">Edit</button>
-		</div>
+	
 	</div>
-	</div>
-	<script>
-		var today = new Date();
-		var dd = today.getDate();
-		var mm = today.getMonth()+1; //January is 0!
-
-		var yyyy = today.getFullYear();
-		if(dd<10){
-			dd='0'+dd;
-		} 
-		if(mm<10){
-			mm='0'+mm;
-		} 
-		var today = dd+'/'+mm+'/'+yyyy;
-		document.getElementById("DATE").value = today;
-	</script>
+	
 @endforeach
 @endsection

@@ -1,7 +1,14 @@
-@extends('layout.index');
+@extends('layout.index')
 
-@section('content');
+@section('content')
 {{--  @if()  --}}
+<script>
+var m = new Date().getMonth;
+var day = new Date().getDate;
+var y = new Date().getFullYear;
+var d = new Date(y,m,day);
+document.getElementById("DATE").innerHTML = d;
+</script>
 @foreach($data as $d)
     <div class="container">
 	<b><u><center>COLLEGE LEAVING CERTIFICATE</center></u></b><BR>
@@ -58,10 +65,10 @@
 				Date of birth    
 			</div>
 			<div class = "col-sm-2">
-				<input type = "date" name="dob" value="{{$d->date_of_birth}}" placeholder="{{$d->date_of_birth}}">
+				<input type = "date" name="dob" id = "dobvalue" value="{{$d->date_of_birth}}" placeholder="{{$d->date_of_birth}}">
 			</div>
 			<div class = "col-sm-2">
-				and in (words) 
+				and in (words) <p id = "dateofb"></p>
 			</div>
 		</div>
 		<br>

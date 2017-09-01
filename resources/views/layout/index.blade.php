@@ -7,6 +7,6 @@
         crossorigin="anonymous">
     </head>
     <body>
-        @yield('content');
+        @yield('content')
     </body>
 </html>

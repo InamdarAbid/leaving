@@ -1,6 +1,6 @@
-@extends('layout.index');
+@extends('layout.index')
 
-@section('content');
+@section('content')
 	<div class="container">
 		<div class="row">
 			<div class="colcol-sm-12">
