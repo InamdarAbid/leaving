@@ -61,14 +61,10 @@ document.getElementById("DATE").innerHTML = d;
 			<div class="col-sm-1">
 				4.
 			</div>
-			<div class = "col-sm-2">
+			<div class = "col-sm-11">
 				Date of birth    
-			</div>
-			<div class = "col-sm-2">
-				<input type = "date" name="dob" id = "dobvalue" value="{{$d->date_of_birth}}" placeholder="{{$d->date_of_birth}}">
-			</div>
-			<div class = "col-sm-2">
-				and in (words) <p id = "dateofb"></p>
+				<input type = "date" name="dob" id = "dobvalue"  placeholder="{{$d->date_of_birth}}">
+				and in (words) {{$dob_temp}}
 			</div>
 		</div>
 		<br>

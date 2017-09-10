@@ -36,7 +36,12 @@
 		<br>
 		<div class="row">
 			<div class="col-sm-1">
-				4. Date of birth <u>{{$d->date_of_birth}}</u> and in (words)  
+				4. 
+			</div>
+			<div class = "col-sm-11">
+				Date of birth <u>{{$d->date_of_birth}}</u>
+				<input type = "date" name="dob" id = "dobvalue"  placeholder="{{$d->date_of_birth}}">
+				and in (words) {{$dob_temp}}
 			</div>
 		</div>
 		<br>
